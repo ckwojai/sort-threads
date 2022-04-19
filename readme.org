@@ -1,0 +1,9 @@
+#+TITLE: Readme
+* Resource
+- Using Intellij Idea with Gradle: [[https://www.jetbrains.com/help/idea/getting-started-with-gradle.html#add_code][guide to get started]]
+* Team
+| Name         | Email                  |
+|--------------+------------------------|
+| Kin Chang    | kinwo.chang@sjsu.edu   |
+| Sarah Yu     | kunhong.yu@sjsu.edu    |
+| Kyra Forster | kyra.foerster@sjsu.edu |
