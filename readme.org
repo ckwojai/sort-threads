@@ -2,13 +2,13 @@
 * Resource
 - Using Intellij Idea with Gradle: [[https://www.jetbrains.com/help/idea/getting-started-with-gradle.html][guide to get started]]
 * Steps
-** TODO Set Up Local Java Development Environment
-** TODO Include and Understand ForkJoin Library
-** TODO Understand QuickSort and MergeSort
-** TODO Create RecursiveAction class that extends RecursiveAction
-** TODO Implement Comparable interfae for input objects
-** TODO Implement threaded QuickSort
-** TODO Implement threaded MergeSort
+ 1) [ ] Set Up Local Java Development Environment
+ 2) [ ] Include and Understand ForkJoin Library
+ 3) [ ] Understand QuickSort and MergeSort
+ 4) [ ] Create RecursiveAction class that extends RecursiveAction
+ 5) [ ] Implement Comparable interfae for input objects
+ 6) [ ] Implement threaded QuickSort
+ 7) [ ] Implement threaded MergeSort
 * Team
 | Name         | Email                  |
 |--------------+------------------------|
