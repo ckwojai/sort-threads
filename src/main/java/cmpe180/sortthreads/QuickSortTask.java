@@ -5,7 +5,6 @@ import java.util.concurrent.RecursiveAction;
 public class QuickSortTask extends RecursiveAction {
     @Override
     protected void compute() {
-
     }
 
     public static void main(String[] args) {

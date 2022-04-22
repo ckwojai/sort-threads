@@ -2,10 +2,13 @@
 * Resource
 - Using Intellij Idea with Gradle: [[https://www.jetbrains.com/help/idea/getting-started-with-gradle.html][guide to get started]]
 - Oracle API Doc on [[https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/RecursiveAction.html][RecursiveAction]]
+- java2s.com: [[http://www.java2s.com/Tutorials/Java/Java_Thread_How_to/Concurrent/Do_quick_sort_with_ForkJoinPool_and_RecursiveAction.htm][Java Thread How to - Do quick sort with ForkJoinPool and RecursiveAction]]
+- GeeksForGeeks: [[https://www.geeksforgeeks.org/quick-sort/][QuickSort]]
+- GeeksForGeeks: [[https://www.geeksforgeeks.org/merge-sort/][MergeSort]]
 * Steps
  1) [X] Set Up Local Java Development Environment
- 2) [ ] Include and Understand ForkJoin Library
- 3) [ ] Understand QuickSort and MergeSort
+ 2) [X] Include and Understand ForkJoin Library
+ 3) [X] Understand QuickSort and MergeSort
  4) [ ] Create RecursiveAction class that extends RecursiveAction
  5) [ ] Implement Comparable interfae for input objects
  6) [ ] Implement threaded QuickSort
