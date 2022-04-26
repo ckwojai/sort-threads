@@ -5,6 +5,9 @@
 - java2s.com: [[http://www.java2s.com/Tutorials/Java/Java_Thread_How_to/Concurrent/Do_quick_sort_with_ForkJoinPool_and_RecursiveAction.htm][Java Thread How to - Do quick sort with ForkJoinPool and RecursiveAction]]
 - GeeksForGeeks: [[https://www.geeksforgeeks.org/quick-sort/][QuickSort]]
 - GeeksForGeeks: [[https://www.geeksforgeeks.org/merge-sort/][MergeSort]]
+- StackOverFlow with [[https://stackoverflow.com/questions/19925820/fork-join-collecting-results][Quicksort Implementation in the comment]]
+- Ocpj8 that explains t1.fork -> t2.compute -> t1.join: [[https://ocpj8.javastudyguide.com/ch28.html][Fork/Join Framework]]
+-
 * Steps
  1) [X] Set Up Local Java Development Environment
  2) [X] Include and Understand ForkJoin Library

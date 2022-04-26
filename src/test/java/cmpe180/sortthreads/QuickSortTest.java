@@ -3,8 +3,6 @@ package cmpe180.sortthreads;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 public class QuickSortTest {
     @Test
     public void QuickSortNormalNumbers() {
