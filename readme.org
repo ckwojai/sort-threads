@@ -7,15 +7,18 @@
 - GeeksForGeeks: [[https://www.geeksforgeeks.org/merge-sort/][MergeSort]]
 - StackOverFlow with [[https://stackoverflow.com/questions/19925820/fork-join-collecting-results][Quicksort Implementation in the comment]]
 - Ocpj8 that explains t1.fork -> t2.compute -> t1.join: [[https://ocpj8.javastudyguide.com/ch28.html][Fork/Join Framework]]
+- Oracle API Ref: [[https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html][Comparable Interface]]
 -
 * Steps
  1) [X] Set Up Local Java Development Environment
  2) [X] Include and Understand ForkJoin Library
  3) [X] Understand QuickSort and MergeSort
- 4) [ ] Create RecursiveAction class that extends RecursiveAction
- 5) [ ] Implement Comparable interfae for input objects
- 6) [ ] Implement threaded QuickSort
- 7) [ ] Implement threaded MergeSort
+ 4) [X] Create RecursiveAction class that extends RecursiveAction
+ 5) [X] Implement Comparable interfae for input objects
+    - ~MergeSortTask<T extends Comparable>~ ensures each object of type T in input ~ArrayList<T>~ implements the Comparable interface
+    - Uses ~obj1.comparedTo(obj2) < 0~ to check if obj1 is less than obj2
+ 6) [X] Implement threaded MergeSort
+ 7) [ ] Implement threaded QuickSort
 * Team
 | Name         | Email                  |
 |--------------+------------------------|
