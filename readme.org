@@ -19,9 +19,12 @@
     - Uses ~obj1.comparedTo(obj2) < 0~ to check if obj1 is less than obj2
  6) [X] Implement threaded MergeSort
  7) [ ] Implement threaded QuickSort
+ 8) [ ] Implement naive MergeSort (unthreaded)
+ 9) [ ] Implement naive QuickSort (unthreaded)
+ 10) [ ] Benchmarking both sorting algorithm
 * Team
-| Name          | Email                  |
-|----------- ---+------------------------|
-| Kin Chang     | kinwo.chang@sjsu.edu   |
-| Sarah Yu      | kunhong.yu@sjsu.edu    |
-| Kyra Foerster | kyra.foerster@sjsu.edu |
+| Name         | Email                  |
+|--------------+------------------------|
+| Kin Chang    | kinwo.chang@sjsu.edu   |
+| Sarah Yu     | kunhong.yu@sjsu.edu    |
+| Kyra Forster | kyra.foerster@sjsu.edu |
