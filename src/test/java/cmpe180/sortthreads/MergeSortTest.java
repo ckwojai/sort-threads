@@ -8,7 +8,7 @@ import java.util.concurrent.ForkJoinPool;
 
 class MergeSortTest {
     @Test
-    public void MergeSortSimpleTest() {
+    public void MergeSortThreadedTest() {
         final int n = 10000;
         final int max_limit = 100000;
         Random rand = new Random();
