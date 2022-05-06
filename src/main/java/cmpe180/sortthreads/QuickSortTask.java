@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.concurrent.RecursiveAction;
 
 
-class QuickSortTask<T extends Comparable> extends RecursiveAction {
+class QuickSortTask<T extends Comparable<T>> extends RecursiveAction {
 
   // Define class variables
   T a[];
@@ -38,9 +38,9 @@ class QuickSortTask<T extends Comparable> extends RecursiveAction {
     } else {
         // otherwise create subtasks
       int pivotIndex = partition(a, left, right);
-      QuickSortTask t1 = new QuickSortTask(a, left,
+      QuickSortTask<T> t1 = new QuickSortTask<T>(a, left,
           pivotIndex - 1);
-      QuickSortTask t2 = new QuickSortTask(a, pivotIndex + 1,
+      QuickSortTask<T> t2 = new QuickSortTask<T>(a, pivotIndex + 1,
           right);
       t1.fork();
       t2.compute();
