@@ -1,33 +1,82 @@
 package cmpe180.sortthreads;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.Random;
 
 import java.util.concurrent.ForkJoinPool;
 
 public class QuickSortTest {
-  public static void main(String[] args) {
-    ForkJoinPool fjPool = new ForkJoinPool();
-    Integer[] a = new Integer[3333344];
 
-    for (int i = 0; i < a.length; i++) {
-      int k = (int) (Math.random() * 22222);
-      a[i] = k;
+  @Test
+    public void QuickSortThreadedTest() {
+        final int n = 10000;
+        final int max_limit = 100000;
+        Random rand = new Random();
+        Integer[] inputArray = new Integer[n];
+        for(int i=0; i<n; i++) {
+            Integer r = rand.nextInt(max_limit);
+            inputArray[i] = r;
+        }
+        Integer[] expectedArray = inputArray.clone();
+        Arrays.sort(expectedArray);
+
+        ForkJoinPool pool = new ForkJoinPool();
+        QuickSortTask<Integer> task = new QuickSortTask<>(inputArray,0, inputArray.length - 1);
+        pool.invoke(task);
+        Assertions.assertArrayEquals(expectedArray, inputArray);
+    }
+    @Test
+    public void QuickSortNaiveTest() {
+        final int n = 10000;
+        final int max_limit = 100000;
+        Random rand = new Random();
+        Integer[] inputArray = new Integer[n];
+        for(int i=0; i<n; i++) {
+            Integer r = rand.nextInt(max_limit);
+            inputArray[i] = r;
+        }
+        Integer[] expectedArray = inputArray.clone();
+        Arrays.sort(expectedArray);
+        
+        QuickSortNaive qsn = new QuickSortNaive() ;
+        qsn.quickSort(inputArray,0, inputArray.length - 1);
+        Assertions.assertArrayEquals(expectedArray, inputArray);
     }
 
-    //QuickSortTask<Integer> forkJoinQuicksortTask = new QuickSortTask<>(a,0, a.length - 1);
-    //long start = System.nanoTime();
-    //fjPool.invoke(forkJoinQuicksortTask);
-    //System.out.println("Time multi-threaded: " + (System.nanoTime() - start));
+    @Test
+    public void QuickSortBenchMark() {
+        int[] ns = {(int) 1.0e4, (int) 1.0e5, (int) 1.0e6, (int) 1.0e7};
+        for (int j=0; j < ns.length; j++) {
+            int n = ns[j];
+            final int max_limit = n;
+            Random rand = new Random();
+            Integer[] inputThreaded = new Integer[n];
+            for (int i = 0; i < n; i++) {
+                Integer r = rand.nextInt(max_limit);
+                inputThreaded[i] = r;
+            }
+            Integer[] inputNaive = inputThreaded.clone();
+            
 
+            ForkJoinPool pool = new ForkJoinPool();
+            QuickSortTask<Integer> task = new QuickSortTask<>(inputThreaded,0, inputThreaded.length - 1);
 
+            long startTime = System.nanoTime();
+            pool.invoke(task);
+            long endTime = System.nanoTime();
+            long threadedDuration = (endTime - startTime) / 1000000;
 
-    // Instantiate naiveQuickSort
-
-    QuickSortNaive naiveQuickSort = new QuickSortNaive() ;
-   long start2 = System.nanoTime();
-   naiveQuickSort.quickSort(a,0, a.length - 1);
-   System.out.println("Time single-threaded: " + (System.nanoTime() - start2));
-    
-    
-
-  }
+            startTime = System.nanoTime();
+            QuickSortNaive qsn = new QuickSortNaive() ;
+            qsn.quickSort(inputNaive,0, inputNaive.length - 1);
+            endTime = System.nanoTime();
+            long naiveDuration = (endTime - startTime) / 1000000;
+            System.out.println("For n=" + n + ",   " + "Naive: " + naiveDuration + "; Threaded: " + threadedDuration);
+        }
+    }
 }
+
+
