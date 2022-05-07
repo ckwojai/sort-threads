@@ -1,35 +1,33 @@
 package cmpe180.sortthreads;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+
+import java.util.concurrent.ForkJoinPool;
 
 public class QuickSortTest {
-    @Test
-    public void QuickSortNormalNumbers() {
+  public static void main(String[] args) {
+    ForkJoinPool fjPool = new ForkJoinPool();
+    Integer[] a = new Integer[3333344];
 
-        QuickSortTask fb = new QuickSortTask();
-        Assertions.assertEquals("1", fb.convert(1));
-        Assertions.assertEquals("2", fb.convert(2));
+    for (int i = 0; i < a.length; i++) {
+      int k = (int) (Math.random() * 22222);
+      a[i] = k;
     }
 
-    @Test
-    public void QuickSortThreeNumbers() {
+    //QuickSortTask<Integer> forkJoinQuicksortTask = new QuickSortTask<>(a,0, a.length - 1);
+    //long start = System.nanoTime();
+    //fjPool.invoke(forkJoinQuicksortTask);
+    //System.out.println("Time multi-threaded: " + (System.nanoTime() - start));
 
-        QuickSortTask fb = new QuickSortTask();
-        Assertions.assertEquals("Fizz", fb.convert(3));
-    }
 
-    @Test
-    public void QuickSortFiveNumbers() {
 
-        QuickSortTask fb = new QuickSortTask();
-        Assertions.assertEquals("Buzz", fb.convert(5));
-    }
+    // Instantiate naiveQuickSort
 
-    @Test
-    public void QuickSortThreeAndFiveNumbers() {
+    QuickSortNaive naiveQuickSort = new QuickSortNaive() ;
+   long start2 = System.nanoTime();
+   naiveQuickSort.quickSort(a,0, a.length - 1);
+   System.out.println("Time single-threaded: " + (System.nanoTime() - start2));
+    
+    
 
-        QuickSortTask fb = new QuickSortTask();
-        Assertions.assertEquals("Buzz", fb.convert(5));
-    }
+  }
 }
