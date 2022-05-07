@@ -1,7 +1,6 @@
 package org.example;
 
-import org.example.QuickSortTask;
-import java.util.Arrays;
+
 import java.util.concurrent.ForkJoinPool;
 
 public class Main {
@@ -17,7 +16,19 @@ public class Main {
     QuickSortTask<Integer> forkJoinQuicksortTask = new QuickSortTask<>(a,0, a.length - 1);
     long start = System.nanoTime();
     fjPool.invoke(forkJoinQuicksortTask);
-    System.out.println("Time: " + (System.nanoTime() - start));
+    System.out.println("Time multi-threaded: " + (System.nanoTime() - start));
+
+
+
+    // Instantiate naiveQuickSort
+
+    QuickSortNaive naiveQuickSort = new QuickSortNaive() ;
+    long start2 = System.nanoTime();
+    naiveQuickSort.quickSort(a,0, a.length - 1);
+    System.out.println("Time single-threaded: " + (System.nanoTime() - start2));
+    
+    
+
   }
 }
 
