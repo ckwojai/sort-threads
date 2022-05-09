@@ -2,7 +2,7 @@ package cmpe180.sortthreads;
 
 import java.util.Arrays;
 
-public class MergeSortNaive<T extends Comparable<T>> {
+public class MergeSortNaive<T extends Comparable<? super T>> {
     static final int THRESHOLD = 100;
     protected void sort(T[] arr, int l, int r) {
         if (r-l < THRESHOLD) {

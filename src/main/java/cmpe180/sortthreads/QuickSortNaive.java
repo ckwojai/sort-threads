@@ -1,10 +1,6 @@
 package cmpe180.sortthreads;
 
-public class QuickSortNaive <T extends Comparable<T>>{
-
-   public QuickSortNaive() {
-  }
-
+public class QuickSortNaive <T extends Comparable<? super T>>{
   void quickSort(T[] a, int left, int right)
   {
     if (left < right)

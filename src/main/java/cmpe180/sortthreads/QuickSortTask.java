@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.concurrent.RecursiveAction;
 
 // QuickSort multi-threaded implementation
-class QuickSortTask<T extends Comparable<T>> extends RecursiveAction {
+class QuickSortTask<T extends Comparable<? super T>> extends RecursiveAction {
 
   // Define class variables
   T a[];

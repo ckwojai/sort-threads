@@ -3,7 +3,7 @@ package cmpe180.sortthreads;
 import java.util.Arrays;
 import java.util.concurrent.RecursiveAction;
 
-public class MergeSortTask<T extends Comparable<T>> extends RecursiveAction {
+public class MergeSortTask<T extends Comparable<? super T>> extends RecursiveAction {
     final T[] arr; final int l, r;
     MergeSortTask(T[] arr, int l, int r) {
         this.arr = arr; this.l = l; this.r = r;
