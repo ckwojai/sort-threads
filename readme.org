@@ -18,10 +18,10 @@
     - ~MergeSortTask<T extends Comparable>~ ensures each object of type T in input ~ArrayList<T>~ implements the Comparable interface
     - Uses ~obj1.comparedTo(obj2) < 0~ to check if obj1 is less than obj2
  6) [X] Implement threaded MergeSort
- 7) [ ] Implement threaded QuickSort
- 8) [ ] Implement naive MergeSort (unthreaded)
- 9) [ ] Implement naive QuickSort (unthreaded)
- 10) [ ] Benchmarking both sorting algorithm
+ 7) [X] Implement threaded QuickSort
+ 8) [X] Implement naive MergeSort (unthreaded)
+ 9) [X] Implement naive QuickSort (unthreaded)
+ 10) [X] Benchmarking both sorting algorithm
 * Team
 | Name          | Email                  |
 |---------------+------------------------|
