@@ -23,8 +23,8 @@
  9) [ ] Implement naive QuickSort (unthreaded)
  10) [ ] Benchmarking both sorting algorithm
 * Team
-| Name         | Email                  |
-|--------------+------------------------|
-| Kin Chang    | kinwo.chang@sjsu.edu   |
-| Sarah Yu     | kunhong.yu@sjsu.edu    |
-| Kyra Forster | kyra.foerster@sjsu.edu |
+| Name          | Email                  |
+|---------------+------------------------|
+| Kin Chang     | kinwo.chang@sjsu.edu   |
+| Sarah Yu      | kunhong.yu@sjsu.edu    |
+| Kyra Foerster | kyra.foerster@sjsu.edu |
